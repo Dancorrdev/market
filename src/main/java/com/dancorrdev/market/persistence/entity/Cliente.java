@@ -1,9 +1,6 @@
 package com.dancorrdev.market.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "clientes")
@@ -18,6 +15,9 @@ public class Cliente {
 
     @Column(name = "correo_electronico")
     private String email;
+
+    @OneToMany(mappedBy = "cliente")
+    private Compra compra;
 
     public String getId() {
         return id;
