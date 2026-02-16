@@ -3,6 +3,7 @@ package com.dancorrdev.market.domain;
 public class Product {
     private int productId;
     private String name;
+    private int categoryId;
     private String description;
     private double price;
     private int stock;
@@ -23,6 +24,14 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getDescription() {
@@ -55,5 +64,13 @@ public class Product {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

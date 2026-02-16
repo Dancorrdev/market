@@ -2,6 +2,8 @@ package com.dancorrdev.market.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -17,7 +19,7 @@ public class Cliente {
     private String email;
 
     @OneToMany(mappedBy = "cliente")
-    private Compra compra;
+    private List<Compra> compras;
 
     public String getId() {
         return id;
@@ -65,5 +67,13 @@ public class Cliente {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
     }
 }

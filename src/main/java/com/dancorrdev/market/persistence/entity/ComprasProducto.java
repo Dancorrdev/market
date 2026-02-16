@@ -44,11 +44,28 @@ public class ComprasProducto {
     public void setTotal(Double total) {
         this.total = total;
     }
-    public  Boolean getEstado() {
+
+    public Boolean getEstado() {
         return estado;
     }
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }
