@@ -1,17 +1,17 @@
 package com.dancorrdev.market.domain;
 
 public class PurchaseItem {
-    private Integer purchaseItemId;
+    private Integer productId;
     private int quantity;
     private Double total;
     private boolean active;
 
-    public Integer getPurchaseItemId() {
-        return purchaseItemId;
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setPurchaseItemId(Integer purchaseItemId) {
-        this.purchaseItemId = purchaseItemId;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     public int getQuantity() {
