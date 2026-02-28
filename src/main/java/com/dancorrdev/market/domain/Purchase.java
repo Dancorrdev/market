@@ -9,8 +9,16 @@ public class Purchase {
     private LocalDateTime date;
     private String paymentMethod;
     private String comment;
-    private Boolean state;
-    private List<PurchaseItem> Items;
+    private String state;
+    private List<PurchaseItem> items;
+
+    public List<PurchaseItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<PurchaseItem> items) {
+        this.items = items;
+    }
 
     public Integer getPurchaseId() {
         return purchaseId;
@@ -52,19 +60,11 @@ public class Purchase {
         this.comment = comment;
     }
 
-    public Boolean getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(Boolean state) {
+    public void setState(String state) {
         this.state = state;
-    }
-
-    public List<PurchaseItem> getItems() {
-        return Items;
-    }
-
-    public void setItems(List<PurchaseItem> items) {
-        Items = items;
     }
 }
